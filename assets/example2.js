@@ -1,6 +1,6 @@
-/* @jsx accumulateProps */
+/* @jsx acc */
 
-const accumulateProps = (fun, props, children) => {
+const acc = (fun, props, children) => {
   return {
     ...props,
     children
@@ -16,3 +16,12 @@ const getContent = () => {
 }
 
 console.log(getContent())
+
+/**
+ * OUTPUT:
+ *
+ * { level1: "top level component",
+ *   children: {
+ *     level2: "this one is nested"
+ *     children: undefined }
+ */

@@ -1,6 +1,4 @@
-/* @jsx printProps */
-
-const printProps = (fun, props) => console.log(props)
+/* @jsx console.log */
 
 const getContent = () => {
   return <null arg1={true} />

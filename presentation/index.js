@@ -37,13 +37,15 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck theme={theme}>
+      <Deck transition={[]} theme={theme}>
         <Slide transition={[]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            JSX++
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text margin="10px 0 0" textColor="tertiary" size={0.8} fit bold>
+            Adam Markon<br />
+            @amarkon88<br />
+            github.com/aem/jsx-playground
           </Text>
         </Slide>
         <CodeSlide
@@ -51,10 +53,10 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require('raw-loader!../assets/example0.js')}
           ranges={[
-            { loc: [0, 8], title: 'Example 0: React' },
-            { loc: [0, 2] },
-            { loc: [3, 6] },
-            { loc: [7, 8] }
+            { loc: [0, 9], title: 'Example 0: React' },
+            { loc: [0, 3] },
+            { loc: [4, 7] },
+            { loc: [8, 9] }
           ]}
         />
         <CodeSlide
@@ -64,9 +66,9 @@ export default class Presentation extends React.Component {
           ranges={[
             { loc: [0, 9], title: 'Example 1: Custom Pragma'},
             { loc: [0, 1] },
-            { loc: [2, 3] },
-            { loc: [4, 7] },
-            { loc: [8, 9] }
+            { loc: [2, 5] },
+            { loc: [6, 9] },
+            { loc: [10, 11] }
           ]}
         />
         <CodeSlide

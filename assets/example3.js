@@ -1,8 +1,7 @@
-/* @jsx printPropsAndExecute */
+/* @jsx execute */
 
-const printPropsAndExecute = (fun, props, children) => {
+const execute = (fun, props, children) => {
   fun()
-  console.log(props)
 }
 
 const SayHello = () => { console.log("Hello!") }
@@ -12,3 +11,10 @@ const getContent = () => {
 }
 
 getContent()
+
+/**
+ * OUTPUT:
+ *
+ * Hello!
+ * { arg1: true }
+ */

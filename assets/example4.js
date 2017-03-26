@@ -1,10 +1,16 @@
-/* @jsx compileMathOps */
+/* @jsx doMaths */
 
-const compileMathOps = (fun, {value}, children) => fun(value, children)
+const doMaths = (fun, {value}, children) => {
+  return fun(value, children)
+}
 
-const Add = (val1, val2) => val1 + (val2 || val1)
+const Add = (val1, val2) => {
+  return val1 + (val2 || 0)
+}
 const Subtract = (val1, val2) => val2 - val1
-const Square = (value, rest) => value * value + (rest || 0)
+const Square = (value, rest) => {
+  return value * value + (rest || 0)
+}
 
 const getContent = () => {
   return (
@@ -17,3 +23,9 @@ const getContent = () => {
 }
 
 console.log(getContent())
+
+/**
+ * OUTPUT:
+ *
+ * 31
+ */
